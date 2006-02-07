@@ -24,13 +24,23 @@ process PROD = {
     double coneRadius = 0.7    
   }
 
-  module out = PoolOutputModule {
-    string fileName = "jets.root"
+  module goodJets = CandSelector {
+    string src = "jets"
+    string cut = "pt > 1.0"
+  }
+
+  module jetHisto = JetAnalyzer {
+    string src = "goodJets"
+    string fileName = "jet-histo.root"
   }
 
   module evtInfo = AsciiOutputModule { 
   }
 
-  path p = { caloTowers, jets, evtInfo, out }
+  module out = PoolOutputModule {
+    string fileName = "jets.root"
+  }
+
+  path p = { evtInfo, caloTowers, jets, goodJets, jetHisto }
 }
 
