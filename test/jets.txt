@@ -41,6 +41,6 @@ process PROD = {
     string fileName = "jets.root"
   }
 
-  path p = { evtInfo, caloTowers, jets, goodJets, jetHisto }
+  endpath p = { evtInfo, caloTowers, jets, goodJets, jetHisto }
 }
 
