@@ -41,6 +41,6 @@ process PROD = {
     untracked string fileName = "jets.root"
   }
 
-  endpath p = { evtInfo, caloTowers, jets, goodJets, jetHisto }
+  endpath p = { evtInfo, caloTowers, jets, goodJets, jetHisto, out }
 }
 
