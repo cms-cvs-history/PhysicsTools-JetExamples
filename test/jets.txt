@@ -18,7 +18,7 @@ process PROD = {
     double overlapThreshold = .75
   }
 
-  module jets = MidpointJetProducer {
+  module jets = MidPointJetProducer {
     string src = "caloTowers"
     using common_jet_parameters
     double coneRadius = 0.7    
