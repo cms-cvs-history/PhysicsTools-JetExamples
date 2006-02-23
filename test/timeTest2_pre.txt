@@ -1,0 +1,20 @@
+process PROD = {
+  source = PoolSource { 
+    untracked int32 maxEvents = 500
+    untracked string fileName = "CaloTowers_HB_HO.root"
+  }	    
+
+  module caloTowers = CaloTowerCandidateProducer {
+    string src = "towermaker"
+  }
+
+  module out = PoolOutputModule {
+    untracked string fileName = "caloCands.root"
+  }
+
+  module evtInfo = AsciiOutputModule {
+  }
+
+  endpath p = { evtInfo, caloTowers, out }
+}
+
