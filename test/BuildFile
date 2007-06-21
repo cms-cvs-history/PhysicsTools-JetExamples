@@ -1,0 +1,27 @@
+<use name=clhep>
+<use name=DataFormats/BTauReco>
+<use name=RecoBTag/MCTools>
+
+<library file=printJetFlavour.cc>
+  <flags EDM_PLUGIN=1>
+  <use name=FWCore/Framework>
+  <use name=SimGeneral/HepPDTRecord>
+  <use name=PhysicsTools/JetMCUtils>
+  <use name=rootmath>
+  <use name=root>
+</library>
+
+<library file=printPartonJet.cc>
+  <flags EDM_PLUGIN=1>
+  <use name=FWCore/Framework>
+</library>
+
+<library file=printTrackJet.cc>
+  <flags EDM_PLUGIN=1>
+  <use name=FWCore/Framework>
+  <use name=SimGeneral/HepPDTRecord>
+  <use name=PhysicsTools/JetMCUtils>
+  <use name=rootmath>
+  <use name=root>
+</library>
+
