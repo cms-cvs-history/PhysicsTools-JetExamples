@@ -5,10 +5,8 @@
 <library file=printJetFlavour.cc>
   <flags EDM_PLUGIN=1>
   <use name=FWCore/Framework>
-  <use name=SimGeneral/HepPDTRecord>
-  <use name=PhysicsTools/JetMCUtils>
-  <use name=rootmath>
-  <use name=root>
+  <use name=SimDataFormats/JetMatching>
+  <use name=DataFormats/JetReco>
 </library>
 
 <library file=printPartonJet.cc>
